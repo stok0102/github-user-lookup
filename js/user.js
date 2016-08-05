@@ -16,13 +16,14 @@ User.prototype.getUser = function (usernameInput) {
 User.prototype.getRepos = function (usernameInput) {
   $.get('https://api.github.com/users/' + usernameInput + '/repos?access_token=' + apiKey + '&per_page=100').then(function(response){
     console.log(response);
-    var name, language;
+    var name, language, htmlUrl;
     $('.userInfo ul').text('');
     response.forEach(function(repo){
       name = repo.name;
       language = repo.language;
+      htmlUrl = repo.html_url;
 
-      $('.userInfo ul').append("<li> name: " + name + " language: " + language + "</li>")
+      $('.userInfo ul').append("<li><a href=" + htmlUrl + ">" + name + " language: " + language + "</a></li>");
     });
   }).fail(function(error){
     console.log(error.responseJSON.message);
