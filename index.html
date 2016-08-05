@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Github Search</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
     <link rel="stylesheet" href="build/css/vendor.css">
     <link rel="stylesheet" href="build/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
@@ -12,13 +13,14 @@
   <body>
     <div class="header jumbotron myJumbo">
       <h1>Github User Lookup</h1>
+      <i class="devicon-ruby-plain colored"></i>
     </div>
     <div class="form-group">
       <label for="nameSearch">Enter a Github Username:</label>
       <input type="text" id="nameSearch">
     </div>
     <button id="getUser" class="btn btn-submit" name="button">Search</button>
-    <div class="userInfo">
+    <div class="userInfo container col-sm-6 col-sm-offset-3">
       <h1></h1>
       <ul>
 

@@ -1,11 +1,21 @@
 .userInfo {
-  background: pink;
+  color: white;
+  display: none;
   img {
     height: 50px;
     width: 50px;
+  }
+  a {
+    color: white;
+  }
+  a:hover {
+    color: salmon;
   }
 }
 
 .myJumbo {
   text-align: center;
+}
+body {
+  background: black;
 }

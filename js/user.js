@@ -20,10 +20,9 @@ User.prototype.getRepos = function (usernameInput) {
     $('.userInfo ul').text('');
     response.forEach(function(repo){
       name = repo.name;
-      language = repo.language;
+      language = repo.language.toLowerCase();
       htmlUrl = repo.html_url;
-
-      $('.userInfo ul').append("<li><a href=" + htmlUrl + ">" + name + " language: " + language + "</a></li>");
+      $('.userInfo ul').append("<li><a href=" + htmlUrl + ">" + name + "  </a><i class='devicon-" + language + "-plain colored'></i></li>");
     });
   }).fail(function(error){
     console.log(error.responseJSON.message);

@@ -6,5 +6,6 @@ $(document).ready(function () {
     newUser = new User();
     newUser.getUser(usernameInput);
     newUser.getRepos(usernameInput);
+    $('.userInfo').show();
   });
 });
