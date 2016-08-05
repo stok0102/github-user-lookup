@@ -1,10 +1,12 @@
+var apiKey = require('./../.env').apiKey;
+
 function User() {}
 
 User.prototype.getUser = function (usernameInput) {
-  $.get("").then(function(response) {
+  $.get('https://api.github.com/users/' + usernameInput + '?access_token=' + apiKey).then(function(response){
     console.log(response);
-  }).fail(function(error) {
-    alert("error");
+  }).fail(function(error){
+    console.log(error.responseJSON.message);
   });
 };
 
