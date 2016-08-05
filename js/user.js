@@ -20,9 +20,17 @@ User.prototype.getRepos = function (usernameInput) {
     $('.userInfo ul').text('');
     response.forEach(function(repo){
       name = repo.name;
-      language = repo.language.toLowerCase();
+      language = repo.language;
+      if (language === 'HTML') {
+        language = 'html5';
+      } else if (language === 'CSS') {
+        language = 'css3'
+      } else if (language) {
+          language = language.toLowerCase();
+      };
+      console.log(language);
       htmlUrl = repo.html_url;
-      $('.userInfo ul').append("<li><a href=" + htmlUrl + ">" + name + "  </a><i class='devicon-" + language + "-plain colored'></i></li>");
+      $('.userInfo ul').append("<li><a href=" + htmlUrl + ">" + name + " " + language + " </a><i class='devicon-" + language + "-plain colored'></i></li>");
     });
   }).fail(function(error){
     console.log(error.responseJSON.message);
