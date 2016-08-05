@@ -5,5 +5,6 @@ $(document).ready(function () {
     var usernameInput = $('#nameSearch').val();
     newUser = new User();
     newUser.getUser(usernameInput);
+    newUser.getRepos(usernameInput);
   });
 });
