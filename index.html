@@ -13,18 +13,22 @@
   <body>
     <div class="header jumbotron myJumbo">
       <h1>Github User Lookup</h1>
-      <i class="devicon-ruby-plain colored"></i>
+      <i class="devicon-github-plain colored"></i>
     </div>
-    <div class="form-group">
-      <label for="nameSearch">Enter a Github Username:</label>
-      <input type="text" id="nameSearch">
-    </div>
-    <button id="getUser" class="btn btn-submit" name="button">Search</button>
-    <div class="userInfo container col-sm-6 col-sm-offset-3">
-      <h1></h1>
-      <ul>
+    <div class="container">
+      <div class="search form-group">
+        <label for="nameSearch">Enter a Github Username:</label>
+        <input type="text" id="nameSearch">
+      </div>
+      <button id="getUser" class="btn btn-lg btn-primary" name="button">Search</button>
+      <div class="userInfo">
+        <div id="userTitle">
+        <h1></h1>
+      </div>
+        <ul>
 
-      </ul>
+        </ul>
+      </div>
     </div>
   </body>
 </html>

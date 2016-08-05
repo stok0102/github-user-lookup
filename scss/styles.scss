@@ -2,20 +2,55 @@
   color: white;
   display: none;
   img {
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
   }
   a {
-    color: white;
+    // color: salmon;
+    font-size: 1.5em;
   }
   a:hover {
-    color: salmon;
+    color: yellow;
+  }
+  i {
+    font-size: 2em;
+  }
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  li {
+    margin-right: 5px;
+    list-style: none;
   }
 }
 
 .myJumbo {
   text-align: center;
+  background-color: salmon;
+  i {
+    font-size: 3em;
+  }
 }
-body {
-  background: black;
+
+// body {
+//   background: #4d4d33;
+// }
+
+.search {
+  color: white;
+  font-size: 2em;
+}
+
+input {
+  color: black;
+}
+
+#userTitle {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-content: center;
+  margin-bottom: 20px;
 }

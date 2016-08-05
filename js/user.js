@@ -7,7 +7,7 @@ User.prototype.getUser = function (usernameInput) {
     console.log(response);
     $('.userInfo img').remove();
     $('.userInfo h1').text(response.name);
-    $('.userInfo').prepend("<img class='img-responsive center-block' src='" + response.avatar_url + "'/>");
+    $('#userTitle').append("<img src='" + response.avatar_url + "'/>");
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
@@ -30,7 +30,7 @@ User.prototype.getRepos = function (usernameInput) {
       };
       console.log(language);
       htmlUrl = repo.html_url;
-      $('.userInfo ul').append("<li><a href=" + htmlUrl + ">" + name + " " + language + " </a><i class='devicon-" + language + "-plain colored'></i></li>");
+      $('.userInfo ul').append("<li class='repoLi'><a href=" + htmlUrl + ">" + name + " </a><i class='devicon-" + language + "-plain colored'></i></li>");
     });
   }).fail(function(error){
     console.log(error.responseJSON.message);
